@@ -1,0 +1,168 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<title>Octopath Traveler Survey</title>
+
+<!DOCTYPE html>
+<html>
+  
+<!--     <img src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/o/octopath-traveler-switch/hero?v=2021030116" alt="Octopath Traveler cover art" class="the_image"> -->
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+h1 {
+  font-family: 'Nanum Gothic';
+  font-weight: bold;
+}
+body {
+  font-family: 'Georgia';
+  line-height: 1.5;
+  background-color: rgb(237, 222, 191, 0.4);
+  border-radius: 2rem;
+  width: 530px; /*fits the whole container*/
+  margin: auto;   
+}
+
+#description{  opacity: 1; }
+
+form{
+  background-color: #C5BFAF;
+  padding: 2.5rem 1rem; /*vertical, hor*/
+  border-radius: 2rem;
+  width: 500px;
+  margin: auto;
+}
+
+.submit_button{
+  width: 100%;
+  padding: 1rem;
+  background: rgb(5,250,5,2.5);
+  border-radius: 20px;
+  cursor:pointer; /*turns cursor into pointer*/
+  font-family: 'Nanum Gothic';
+  font-weight: bold;
+}
+
+.input-headings{
+  margin: 0 auto 1.25rem auto;
+  padding: 0.30rem;
+}
+
+.form-inputs {
+  display: block;
+  width: 90%;
+  height: 2rem;
+  padding: 0.25rem 0.75rem;
+  background-color:#fff;
+  border: 1px solid #ced;
+  border-radius: 0.25rem;
+}
+
+#title, #description {
+  text-align: center;
+}
+
+#textarea{
+  margin-bottom: 20px;
+  font-family: "Georgia";
+}
+
+html{
+  background: url("https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/o/octopath-traveler-switch/hero?v=2021030116") no-repeat center center fixed;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  background-color: #EDDEBF;
+}
+  </style>
+
+<header>
+  <h1 id="title"> Octopath Traveler Survey </h1>
+  <p id="description">Fill details about your experience with the game </p>
+</header>
+
+<body>
+ 
+
+ <form id="survey-form">
+   <div class="input-headings">
+  <label for="name" id="name-label">Name</label>
+  <input id="name" type="text" name="name" placeholder="Keisuke Miyauchi" class="form-inputs" required></input>
+  <br>
+
+  <label for="email" id="email-label">Email</label>
+  <input id="email" type="email" name="email" placeholder="kmiyauchi@squareenix.com" class="form-inputs" required></input>
+  <br>
+
+  <label for="number" id="number-label">Age</label>
+  <input id="number" type="number" name="number" placeholder="45"min="10" max="120" class="form-inputs" required></input>
+  <br>
+  
+  <label form"dropdown" id="games">Select your favorite Square Enix franchise:</label>
+  <select id="dropdown" class="form-inputs">
+    <option value="Final_Fantasy">Final Fantasy</option>
+    <option value="Dragon_Quest">Dragon Quest</option>
+    <option value="Kingdom_Hearts">Kingdom Hearts</option>
+    <option value="Tomb_Raider">Tomb Raider</option>
+    <option value="Chrono_Trigger">Chrono Trigger</option>
+    <option value="Secret_of_Mana">Secret of Mana</option>
+    <option value="Life_is_Strange">Life is Strange</option>
+    <option value="The_World_Ends_with_You">The World Ends with You</option>
+    <option value="Nier">Nier</option>
+    <option value="Marvel_Avengers">Marvel Avengers</option>
+</select>
+<br><br>
+
+<label form ="favorite_part" id="favorite_part"><b>What was your favorite feature in Octopath Traveler?</b></label>
+<br>
+  <input id="favorite_part" type="radio" id="story" name="part" value="story">
+  <label for="favorite_part">Story</label>
+<br>    
+  <input id="favorite_part" type="radio" id="combat" name="part" value="combat">
+  <label for="favorite_part">Combat</label>    
+<br>
+  <input id="favorite_part" type="radio" id="voice_acting" name="part" value="voice_acting">
+  <label for="favorite_part">Voice Acting</label>
+<br>
+  <input id="favorite_part" type="radio" id="side_quests" name="part" value="side_quests">
+  <label for="favorite_part">Side Quests</label>
+<br>
+  <input id="favorite_part" type="radio" id="character_interactions" name="part" value="character_interactions">
+  <label for="favorite_part">Character Interactions</label>
+<br>
+  <input id="favorite_part" type="radio" id="graphics" name="part" value="graphics">
+  <label for="favorite_part">Graphics</label>
+<br><br>
+
+<label for="features"><b>What can we improve upon? (Select all that apply): </b></label>
+<br>
+  <input id="checkbox" type="checkbox" name="improvements" value="random_encounters">
+  <label for="checkbox">Random Encounters</label>
+<br>
+  <input id="checkbox" type="checkbox" name="improvements" value="main_story">
+  <label for="checkbox">Main Story</label>
+<br>
+  <input id="checkbox" type="checkbox" name="improvements" value="side_quests">
+  <label for="checkbox">Side Quests</label>
+<br>
+  <input id="checkbox" type="checkbox" name="improvements" value="pacing">
+  <label for="checkbox">Pacing</label>
+<br>
+  <input id="checkbox" type="checkbox" name="improvements" value="level-up_system">
+  <label for="checkbox">Level-Up System</label>
+<br>
+  <input id="checkbox" type="checkbox" name="improvements" value="graphics">
+  <label for="checkbox">Graphics</label>
+<br><br>
+
+<label id="textarea"><b>Additional Comments:</b></label>
+ <br>
+ <textarea id="textarea" name="comments" rows="5" cols="40"></textarea> <!-- 5 means 5 linespaces -->
+<br>
+
+ <input id="submit" type="submit" value="Submit" class="submit_button"> <!-- Completed all steps for FCC-->
+
+</div>
+  </form>
+ </body>
+</html>
